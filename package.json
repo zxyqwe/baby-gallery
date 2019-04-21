@@ -1,0 +1,20 @@
+{
+    "name": "baby-gallery",
+    "version": "1.0.0",
+    "description": "tool to manage baby gallery",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron ."
+    },
+    "repository": "https://github.com/zxyqwe/baby-gallery",
+    "keywords": [
+      "Electron",
+      "zxyqwe",
+      "baby-gallery"
+    ],
+    "author": "zxyqwe",
+    "license": "CC0-1.0",
+    "devDependencies": {
+      "electron": "~4.1.4"
+    }
+  }
