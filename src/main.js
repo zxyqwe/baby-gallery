@@ -3,12 +3,16 @@ const {
     app,
     BrowserWindow
 } = require('electron');
+const {
+    checkVersion
+} = require('./util/updateChecker');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
 function createWindow() {
+    checkVersion();
     // Create the browser window.
     mainWindow = new BrowserWindow({
         width: 800,
