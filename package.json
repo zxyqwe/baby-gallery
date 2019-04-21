@@ -1,20 +1,44 @@
 {
-    "name": "baby-gallery",
-    "version": "1.0.0",
-    "description": "tool to manage baby gallery",
-    "main": "main.js",
-    "scripts": {
-      "start": "electron ."
+  "name": "baby-gallery",
+  "version": "0.0.1",
+  "description": "tool to manage baby gallery",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "release": "electron-builder",
+    "patch": "npm version patch && git push origin master && git push origin --tags",
+    "minor": "npm version minor && git push origin master && git push origin --tags",
+    "major": "npm version major && git push origin master && git push origin --tags"
+  },
+  "repository": "https://github.com/zxyqwe/baby-gallery",
+  "keywords": [
+    "Electron",
+    "zxyqwe",
+    "baby-gallery"
+  ],
+  "build": {
+    "productName": "baby-gallery",
+    "appId": "com.zxyqwe.baby.gallery",
+    "directories": {
+      "output": "build"
     },
-    "repository": "https://github.com/zxyqwe/baby-gallery",
-    "keywords": [
-      "Electron",
-      "zxyqwe",
-      "baby-gallery"
+    "files": [
+      "src/**/*"
     ],
-    "author": "zxyqwe",
-    "license": "CC0-1.0",
-    "devDependencies": {
-      "electron": "~4.1.4"
+    "mac": {
+      "target": "zip"
+    },
+    "win": {
+      "target": "portable"
     }
+  },
+  "author": "zxyqwe",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~4.1.4",
+    "electron-builder": "~20.39.0",
+    "vue": "~2.3.3",
+    "lowdb": "~1.0.0",
+    "fs-extra": "~4.0.2"
   }
+}

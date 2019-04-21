@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 // Modules to control application life and create native browser window
 const {
     app,
@@ -15,12 +14,13 @@ function createWindow() {
         width: 800,
         height: 600,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            webSecurity: false
         }
     });
 
     // and load the index.html of the app.
-    mainWindow.loadFile('index.html');
+    mainWindow.loadFile('src/index.html');
 
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
