@@ -12,7 +12,6 @@ const {
 let mainWindow;
 
 function createWindow() {
-    checkVersion();
     // Create the browser window.
     mainWindow = new BrowserWindow({
         width: 800,
@@ -28,6 +27,7 @@ function createWindow() {
 
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
+    checkVersion();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
