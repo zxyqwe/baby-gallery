@@ -1,10 +1,9 @@
 // Modules to control application life and create native browser window
 const {
     app,
-    BrowserWindow
 } = require('electron');
 const {
-    checkVersion
+    checkVersion,
 } = require('./util/updateChecker');
 const log = require('electron-log');
 
@@ -16,7 +15,7 @@ let mainWindow;
 
 function createWindow() {
     const {
-        initWindow
+        initWindow,
     } = require('./util/window');
     // Create the browser window.
     mainWindow = initWindow('main', {
@@ -24,15 +23,15 @@ function createWindow() {
         height: 800,
         webPreferences: {
             nodeIntegration: true,
-            webSecurity: false
-        }
+            webSecurity: false,
+        },
     });
 
     // and load the index.html of the app.
     mainWindow.loadFile('src/index.html');
 
     // Open the DevTools.
-    if (process.env.NODE_ENV === "debug") {
+    if (process.env.NODE_ENV === 'debug') {
         mainWindow.openDevTools();
         // mainWindow.webContents.openDevTools();
     }

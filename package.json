@@ -36,13 +36,20 @@
   "author": "zxyqwe",
   "license": "CC0-1.0",
   "dependencies": {
-    "electron-log": "~3.0.5",
     "axios": "~0.18.0",
+    "electron-log": "~3.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.13.0",
+    "eslint-plugin-vue": "^5.2.2",
     "fs-jetpack": "~2.2.2"
   },
   "devDependencies": {
     "axios": "~0.18.0",
     "fs-jetpack": "~2.2.2",
+    "bootstrap": "~3.4.1",
+    "jquery": "~3.4.0",
+    "exifreader": "~2.8.2",
+    "xel": "~0.0.199",
     "electron": "~4.1.4",
     "electron-builder": "~20.39.0",
     "electron-cookies": "~1.1.0",
