@@ -6,8 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=debug ELECTRON_ENABLE_LOGGING=true electron .",
     "postinstall": "electron-builder install-app-deps",
-    "release": "NODE_ENV=release electron-builder",
-    "release-all": "NODE_ENV=release electron-builder -wml"
+    "release": "NODE_ENV=release electron-builder -wml"
   },
   "repository": "https://github.com/zxyqwe/baby-gallery",
   "keywords": [
