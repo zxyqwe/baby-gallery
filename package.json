@@ -38,10 +38,10 @@
   "author": "zxyqwe",
   "license": "CC0-1.0",
   "dependencies": {
-    "axios": "~0.18.0"
+    "axios": "~0.18.1"
   },
   "devDependencies": {
-    "axios": "~0.18.0",
+    "axios": "~0.18.1",
     "electron": "~4.1.4",
     "electron-builder": "~20.39.0",
     "fs-extra": "~4.0.2",
