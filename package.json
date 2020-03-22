@@ -4,11 +4,10 @@
   "description": "tool to manage baby gallery",
   "main": "./src/main.js",
   "scripts": {
-    "start": "electron .",
-    "release": "electron-builder",
-    "patch": "npm version patch && git push origin master && git push origin --tags",
-    "minor": "npm version minor && git push origin master && git push origin --tags",
-    "major": "npm version major && git push origin master && git push origin --tags"
+    "start": "NODE_ENV=debug ELECTRON_ENABLE_LOGGING=true electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "NODE_ENV=release electron-builder",
+    "release-all": "NODE_ENV=release electron-builder -wml"
   },
   "repository": "https://github.com/zxyqwe/baby-gallery",
   "keywords": [
@@ -26,7 +25,8 @@
       "src/**/*"
     ],
     "mac": {
-      "target": "zip"
+      "target": "zip",
+      "identity": null
     },
     "win": {
       "target": "portable"
@@ -38,12 +38,24 @@
   "author": "zxyqwe",
   "license": "CC0-1.0",
   "dependencies": {
-    "axios": "~0.18.1"
+    "axios": "^0.19.0",
+    "electron-log": "~3.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.13.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "fs-jetpack": "~2.2.2"
   },
   "devDependencies": {
-    "axios": "~0.18.1",
+    "axios": "~0.18.0",
+    "fs-jetpack": "~2.2.2",
+    "bootstrap": "~3.4.1",
+    "jquery": "~3.4.0",
+    "exifreader": "~2.8.2",
+    "xel": "~0.0.199",
     "electron": "~4.1.4",
     "electron-builder": "~20.39.0",
+    "electron-cookies": "~1.1.0",
+    "electron-log": "~3.0.5",
     "fs-extra": "~4.0.2",
     "lowdb": "~1.0.0",
     "vue": "~2.3.4"

@@ -24,6 +24,8 @@ const checkVersion = async () => {
                     shell.openExternal(downloadUrl);
                 }
             });
+        } else {
+            console.log(version, ' <--> ', latest);
         }
     } else {
         return false;

@@ -1,33 +1,41 @@
 // Modules to control application life and create native browser window
 const {
     app,
-    BrowserWindow
 } = require('electron');
 const {
-    checkVersion
+    checkVersion,
 } = require('./util/updateChecker');
+const log = require('electron-log');
+
+log.transports.file.level = 'debug';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
 function createWindow() {
-    checkVersion();
+    const {
+        initWindow,
+    } = require('./util/window');
     // Create the browser window.
-    mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+    mainWindow = initWindow('main', {
+        width: 1000,
+        height: 800,
         webPreferences: {
             nodeIntegration: true,
-            webSecurity: false
-        }
+            webSecurity: false,
+        },
     });
 
     // and load the index.html of the app.
     mainWindow.loadFile('src/index.html');
 
     // Open the DevTools.
-    mainWindow.webContents.openDevTools();
+    if (process.env.NODE_ENV === 'debug') {
+        mainWindow.openDevTools();
+        // mainWindow.webContents.openDevTools();
+    }
+    checkVersion();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
