@@ -46,8 +46,6 @@
     "fs-jetpack": "~2.2.2"
   },
   "devDependencies": {
-    "axios": "~0.18.0",
-    "fs-jetpack": "~2.2.2",
     "bootstrap": "~3.4.1",
     "jquery": "~3.4.0",
     "exifreader": "~2.8.2",
@@ -55,7 +53,6 @@
     "electron": "~4.1.4",
     "electron-builder": "~20.39.0",
     "electron-cookies": "~1.1.0",
-    "electron-log": "~3.0.5",
     "fs-extra": "~4.0.2",
     "lowdb": "~1.0.0",
     "vue": "~2.3.4"
