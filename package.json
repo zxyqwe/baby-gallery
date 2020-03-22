@@ -1,6 +1,6 @@
 {
   "name": "baby-gallery",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tool to manage baby gallery",
   "main": "./src/main.js",
   "scripts": {
