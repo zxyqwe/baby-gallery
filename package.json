@@ -25,7 +25,8 @@
       "src/**/*"
     ],
     "mac": {
-      "target": "zip"
+      "target": "zip",
+      "identity": null
     },
     "win": {
       "target": "portable"
